@@ -24,7 +24,6 @@ public class PHDashboardPage {
 		Thread.sleep(2000);
 		//VALIDATE PAGE URL
 
-		
 		String ActualResult = driver.getCurrentUrl();
 		String ExpectedResult = "https://staging.dh8h2bodd8qh6.amplifyapp.com/login";
 		System.out.println("ExpectedResult :-"+ExpectedResult);
