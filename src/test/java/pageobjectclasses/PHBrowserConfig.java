@@ -22,6 +22,7 @@ public class PHBrowserConfig {
 //          DesiredCapabilities OBJCapabalities =  new DesiredCapabilities();
 //          OBJCapabalities.setBrowserName("chrome");
 //          URL Url= null;
+
 //          try
 //          {
 //              Url = new URL("http://65.0.11.42:4444/");
