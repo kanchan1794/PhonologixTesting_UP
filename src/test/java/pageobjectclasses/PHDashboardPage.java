@@ -31,7 +31,6 @@ public class PHDashboardPage {
 		Assert.assertEquals(ActualResult, ExpectedResult);
 		//driver.get(ExpectedResult);
 
-		
 				
 				//VALIDATE LOGIN TEXT ON PAGE
         Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Login')]")).isDisplayed());
