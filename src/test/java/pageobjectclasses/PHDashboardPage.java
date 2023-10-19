@@ -19,8 +19,7 @@ public class PHDashboardPage {
 	public void UserLoggedIn() throws Exception {
 		//BrowserConfig.SetDriver();
 		driver.get("https://staging.dh8h2bodd8qh6.amplifyapp.com/login");
-	
-		//driver.navigate().to("https://staging.dh8h2bodd8qh6.amplifyapp.com/login");
+			//driver.navigate().to("https://staging.dh8h2bodd8qh6.amplifyapp.com/login");
 		Thread.sleep(2000);
 		//VALIDATE PAGE URL
 
