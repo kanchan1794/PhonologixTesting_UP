@@ -15,6 +15,7 @@ public class PHDashboard extends PHBrowserConfig {
 	public void browser_is_open_and_user_is_logged_in() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 		ObjPHDBPage.UserLoggedIn();
+
 	}
 
 	@Given("User Can Select The Value From Dropdownlist")
