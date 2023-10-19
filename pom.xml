@@ -71,11 +71,11 @@
     <artifactId>maven-cucumber-reporting</artifactId>
     <version>9863b38b-beta</version>
 </dependency>
-  	<dependency>
+  <!--	<dependency>
   		<groupId>OpenBrowser</groupId>
   		<artifactId>OpenBrowser</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	</dependency>-->
   </dependencies>
 
 
