@@ -10,6 +10,7 @@ import io.cucumber.junit.CucumberOptions;
         glue = {"stepdefinitions"},
         plugin = {"json:target/cucumber.json"},
 		tags = "@Dashboard"
+
 )
 		
 public class TestRunner {

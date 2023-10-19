@@ -68,6 +68,7 @@ public class PHBrowserConfig {
 	  driverThread.set(driver);
 	  driver.manage().window().maximize();
 	  */
+
 	  }
 }
 
