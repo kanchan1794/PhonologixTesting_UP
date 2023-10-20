@@ -39,7 +39,7 @@ public class PHBrowserConfig {
           ChromeOptions chromeOptions = new ChromeOptions();
           RemoteWebDriver driver = null;
           try {
-              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);
+              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
           } catch (MalformedURLException e) {
               throw new RuntimeException(e);
           }
