@@ -42,7 +42,7 @@ public class PHBrowserConfig {
           OBJCapabalities.setBrowserName("chrome");
 System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           ChromeOptions chromeOptions = new ChromeOptions();
-          chromeOptions.setBrowserVersion("118.0.5993.71 ");
+          chromeOptions.setBrowserVersion("116.0.5845.111 ");
           chromeOptions.setCapability("browserVersion", "118");
           //WebDriver driver=null;
           ClientConfig config = ClientConfig.defaultConfig().connectionTimeout(Duration.ofMinutes(20))
