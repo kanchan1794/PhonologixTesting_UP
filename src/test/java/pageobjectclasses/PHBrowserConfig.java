@@ -8,9 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.ClientConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 //import java.net.malformedurlexception
 
 public class PHBrowserConfig {
@@ -36,18 +38,26 @@ public class PHBrowserConfig {
 
 
 
-
+          DesiredCapabilities OBJCapabalities =  new DesiredCapabilities();
+          OBJCapabalities.setBrowserName("chrome");
 System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           ChromeOptions chromeOptions = new ChromeOptions();
-          //chromeOptions.setBrowserVersion("118.0.5993.71 ");
+          chromeOptions.setBrowserVersion("118.0.5993.71 ");
           chromeOptions.setCapability("browserVersion", "118");
-          WebDriver driver=null;
+          //WebDriver driver=null;
+          ClientConfig config = ClientConfig.defaultConfig().connectionTimeout(Duration.ofMinutes(20))
+                  .readTimeout(Duration.ofMinutes(20)); // I change this 3 minute(Default) to 20 minutes.
+
+          WebDriver driver = RemoteWebDriver.builder().oneOf(OBJCapabalities).address("http://13.233.48.140/").config(config).build(); // now you can use this remoteWebDriver.
+
+
+
           //RemoteWebDriver driver = null;
-          try {
-              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
-          } catch (MalformedURLException e) {
-              throw new RuntimeException(e);
-          }
+//          try {
+//              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
+//          } catch (MalformedURLException e) {
+//              throw new RuntimeException(e);
+//          }
           driverThread.set(driver);
           driver.manage().window().maximize();
           System.out.println("########### I am here ###########");
