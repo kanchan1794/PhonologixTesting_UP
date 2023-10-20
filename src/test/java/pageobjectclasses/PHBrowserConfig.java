@@ -37,7 +37,10 @@ public class PHBrowserConfig {
 
 System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           ChromeOptions chromeOptions = new ChromeOptions();
-          RemoteWebDriver driver = null;
+          //chromeOptions.setBrowserVersion("118.0.5993.71 ");
+          chromeOptions.setCapability("browserVersion", "118");
+          WebDriver driver=null;
+          //RemoteWebDriver driver = null;
           try {
               driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
           } catch (MalformedURLException e) {
@@ -45,6 +48,7 @@ System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           }
           driverThread.set(driver);
           driver.manage().window().maximize();
+          System.out.println("########### I am here ###########");
 
 //          WebDriver driver=new ChromeDriver();
 //          driverThread.set(driver);
