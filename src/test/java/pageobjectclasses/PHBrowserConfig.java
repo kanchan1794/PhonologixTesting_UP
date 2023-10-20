@@ -36,19 +36,19 @@ public class PHBrowserConfig {
 
 
 
-//          ChromeOptions chromeOptions = new ChromeOptions();
-//          RemoteWebDriver driver = null;
-//          try {
-//              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
-//          } catch (MalformedURLException e) {
-//              throw new RuntimeException(e);
-//          }
-//          driverThread.set(driver);
-//          driver.manage().window().maximize();
-
-          WebDriver driver=new ChromeDriver();
+          ChromeOptions chromeOptions = new ChromeOptions();
+          RemoteWebDriver driver = null;
+          try {
+              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);//http://13.233.48.140/
+          } catch (MalformedURLException e) {
+              throw new RuntimeException(e);
+          }
           driverThread.set(driver);
           driver.manage().window().maximize();
+
+//          WebDriver driver=new ChromeDriver();
+//          driverThread.set(driver);
+//          driver.manage().window().maximize();
 
 		 /* System.setProperty("otel.traces.exporter", "jaeger");
 		  System.setProperty("otel.exporter.jaeger.endpoint","http://localhost:4444");
