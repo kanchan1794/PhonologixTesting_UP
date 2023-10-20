@@ -35,7 +35,7 @@ public class PHBrowserConfig {
          // WebDriver driver = new RemoteWebDriver(new URL("http://www.myexamplebrowserstack.com"), chromeOptions);
 
 
-
+System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           ChromeOptions chromeOptions = new ChromeOptions();
           RemoteWebDriver driver = null;
           try {
