@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features = {"src/test/java/featurefiles"},
         glue = {"stepdefinitions"},
-        //plugin = {"json:target/cucumber.json"},
+        plugin = {"json:target/cucumber.json"},
 		tags = "@Dashboard"
 )
 		
