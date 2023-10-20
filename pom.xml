@@ -78,11 +78,11 @@
 </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
-       <!-- <dependency>
+       <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>maven-cucumber-reporting</artifactId>
             <version>9863b38b-beta</version>
-        </dependency>-->
+        </dependency>
 
 
 
@@ -92,7 +92,7 @@
 <!--  		<version>0.0.1-SNAPSHOT</version>-->
 <!--  	</dependency>-->
   </dependencies>
-    <!--<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -125,7 +125,7 @@
     </build>
 
 
--->
+
 
 
 </project>
