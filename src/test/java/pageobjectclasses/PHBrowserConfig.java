@@ -33,10 +33,13 @@ public class PHBrowserConfig {
 //          }
 
          // WebDriver driver = new RemoteWebDriver(new URL("http://www.myexamplebrowserstack.com"), chromeOptions);
+
+
+
           ChromeOptions chromeOptions = new ChromeOptions();
           RemoteWebDriver driver = null;
           try {
-              driver = new RemoteWebDriver(new URL("http://65.0.11.42:4444/"),chromeOptions);
+              driver = new RemoteWebDriver(new URL("http://13.233.48.140/"),chromeOptions);
           } catch (MalformedURLException e) {
               throw new RuntimeException(e);
           }
