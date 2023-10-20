@@ -8,7 +8,8 @@ public class PHLaunchBrowser {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        
+
+
         // Launch Website
         driver.get("https://staging.dx0oqxblmo7a7.amplifyapp.com/dashboard");
         Thread.sleep(2000);

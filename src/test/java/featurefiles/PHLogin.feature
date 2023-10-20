@@ -6,3 +6,4 @@ Feature: Test Phonologix Login Functionality
     When User Enters Username and Password
     And User Clicks On Login button
     Then User Is Navigated To Dashboard
+
