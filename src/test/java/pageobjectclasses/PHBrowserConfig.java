@@ -35,20 +35,32 @@ public class PHBrowserConfig {
 //          }
 
          // WebDriver driver = new RemoteWebDriver(new URL("http://www.myexamplebrowserstack.com"), chromeOptions);
-
-
-
-          DesiredCapabilities OBJCapabalities =  new DesiredCapabilities();
-          OBJCapabalities.setBrowserName("chrome");
-System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
           ChromeOptions chromeOptions = new ChromeOptions();
-          chromeOptions.setBrowserVersion("116.0.5845.111 ");
-          chromeOptions.setCapability("browserVersion", "118");
-          //WebDriver driver=null;
-          ClientConfig config = ClientConfig.defaultConfig().connectionTimeout(Duration.ofMinutes(20))
-                  .readTimeout(Duration.ofMinutes(20)); // I change this 3 minute(Default) to 20 minutes.
+          chromeOptions.setCapability("browserVersion", "74");
+          chromeOptions.setCapability("platformName", "Windows 10");
+          WebDriver driver = null;
+          //WebDriver driver = null;
+          try {
+              driver = new RemoteWebDriver(new URL("https://staging.dh8h2bodd8qh6.amplifyapp.com/login"), chromeOptions);
+          } catch (MalformedURLException e) {
+              throw new RuntimeException(e);
+          }
+          driverThread.set(driver);
+          driver.manage().window().maximize();
+          System.out.println("########### I am here ###########");
 
-          WebDriver driver = RemoteWebDriver.builder().oneOf(OBJCapabalities).address("http://13.233.48.140/").config(config).build(); // now you can use this remoteWebDriver.
+
+//          DesiredCapabilities OBJCapabalities =  new DesiredCapabilities();
+//          OBJCapabalities.setBrowserName("chrome");
+//System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
+//          ChromeOptions chromeOptions = new ChromeOptions();
+//          chromeOptions.setBrowserVersion("116.0.5845.111 ");
+//          chromeOptions.setCapability("browserVersion", "118");
+//          //WebDriver driver=null;
+//          ClientConfig config = ClientConfig.defaultConfig().connectionTimeout(Duration.ofMinutes(20))
+//                  .readTimeout(Duration.ofMinutes(20)); // I change this 3 minute(Default) to 20 minutes.
+//
+//          WebDriver driver = RemoteWebDriver.builder().oneOf(OBJCapabalities).address("http://13.233.48.140/").config(config).build(); // now you can use this remoteWebDriver.
 
 
 
@@ -58,9 +70,9 @@ System.setProperty("webdriver.chrome.diver","/usr/bin/chrome-driver");
 //          } catch (MalformedURLException e) {
 //              throw new RuntimeException(e);
 //          }
-          driverThread.set(driver);
-          driver.manage().window().maximize();
-          System.out.println("########### I am here ###########");
+//          driverThread.set(driver);
+//          driver.manage().window().maximize();
+//          System.out.println("########### I am here ###########");
 
 //          WebDriver driver=new ChromeDriver();
 //          driverThread.set(driver);
